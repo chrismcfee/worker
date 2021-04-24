@@ -1,8 +1,17 @@
-from partlab/ubuntu-golang
+from ubuntu
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y upgrade
 RUN apt-get -y dist-upgrade
+#RUN apt-get -y install golang
+#RUN apt-get -y install software-properties-common 
+#RUN apt-get -y install gpg
+#RUN add-apt-repository ppa:longsleep/golang-backports
+RUN apt-get -y update
+RUN apt-get -y install gnupg2
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F6BC817356A3D45E
+RUN apt-get -y install golang-go
+RUN go version
 RUN useradd -ms /bin/bash worker
 RUN chown -R worker:worker /home/worker/
 USER worker
