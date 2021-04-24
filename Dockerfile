@@ -12,7 +12,7 @@ RUN mkdir -p /home/worker/dero/
 ADD derosuite/ /home/worker/dero/
 #RUN cd ~/ && cp -avr derosuite/ /home/worker/dero
 #RUN mkdir /home/worker/gopath && cd /home/worker/gopath && GET SHIT HERE
-RUN cd /home/worker/derosuite && cat /home/worker/derosuite/README.md
+RUN cd /home/worker/dero && cat /home/worker/dero/README.md
 USER root
 #ADD . /opt/go/src/myapp
 #RUN go get github.com/deroproject/derosuite RUN go install myapp
