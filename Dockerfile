@@ -7,10 +7,11 @@ RUN useradd -ms /bin/bash worker
 USER worker
 #RUN export PATH=$PATH:$(go env GOPATH)/bin
 USER root
-RUN mkdir -p /home/worker/dero/
-COPY derosuite/ /home/worker/dero/
-RUN cp -avr /home/worker/dero/derosuite /home/worker/
-RUN cd /home/worker/dero && ls -la 
+RUN mkdir -p /home/worker/derosrc/
+RUN mkdir -p /home/worker/proj
+COPY derosuite/ /home/worker/derosrc/
+RUN cp -avr /home/worker/derosrc /home/worker/proj
+RUN cd /home/worker/proj && ls -la 
 USER root
 #ADD . /opt/go/src/myapp
 #RUN go get github.com/deroproject/derosuite RUN go install myapp
