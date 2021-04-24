@@ -5,13 +5,11 @@ RUN apt-get -y upgrade
 RUN apt-get -y dist-upgrade
 RUN useradd -ms /bin/bash worker
 USER worker
-WORKDIR /home/worker
 #RUN export PATH=$PATH:$(go env GOPATH)/bin
 USER root
 RUN mkdir -p /home/worker/dero/
 COPY derosuite/ /home/worker/dero/
-#RUN cd ~/ && cp -avr derosuite/ /home/worker/dero
-#RUN mkdir /home/worker/gopath && cd /home/worker/gopath && GET SHIT HERE
+RUN cp -avr /home/worker/dero/derosuite /home/worker/
 RUN cd /home/worker/dero && ls -la 
 USER root
 #ADD . /opt/go/src/myapp
