@@ -55,7 +55,7 @@ RUN . ~/.bashrc
 #RUN go get github.com/deroproject/derosuite
 RUN chown -R worker:worker /home/worker/
 #RUN chown -R worker:worker /usr/local/go
-RUN chown -R worker:worker /root/.go
+#RUN chown -R worker:worker /root/.go
 USER worker
 #RUN go install myapp
 RUN echo we are almost ready to start!
