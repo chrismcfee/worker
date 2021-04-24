@@ -51,7 +51,7 @@ RUN echo we are almost ready to start!
 USER root
 RUN echo im root again now
 #RUN cd /home/worker/proj/derosrc/ && chmod +x build_all.sh && ./build_all.sh
-RUN go get -u -v -d github.com/deroproject/derosuite
+RUN go get -d github.com/deroproject/derosuite
 #ENTRYPOINT /opt/go/bin/myapp
 EXPOSE 8080
 #RUN cd derosuite
