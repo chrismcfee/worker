@@ -10,6 +10,8 @@ RUN apt-get -y dist-upgrade
 RUN apt-get -y update
 RUN apt-get -y install gnupg2
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F6BC817356A3D45E
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y install tzdata
 RUN apt-get -y install golang-go
 RUN go version
 RUN useradd -ms /bin/bash worker
