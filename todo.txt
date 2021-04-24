@@ -1,1 +1,7 @@
 docker
+
+
+
+
+configure host with proper ssh security
+test on host
