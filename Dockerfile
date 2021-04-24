@@ -9,8 +9,8 @@ WORKDIR /home/worker
 #RUN export PATH=$PATH:$(go env GOPATH)/bin
 USER root
 RUN mkdir -p /home/worker/dero/
-COPY derosuite/ .
-RUN cd ~/ && cp -avr derosuite/ /home/worker/dero
+ADD derosuite/ /home/worker/dero/
+#RUN cd ~/ && cp -avr derosuite/ /home/worker/dero
 #RUN mkdir /home/worker/gopath && cd /home/worker/gopath && GET SHIT HERE
 RUN cd /home/worker/dero && ls -la
 RUN echo coom
