@@ -64,6 +64,8 @@ RUN echo im root again now
 RUN apt-get -y install git
 RUN go get -u github.com/deroproject/derosuite/cmd/dero-miner
 RUN cd /home/worker/proj/derosrc/ && chmod +x build_all.sh && ./build_all.sh
+RUN echo buidl
+RUN cd /home/worker/ && ls -la
 #RUN go get -d github.com/deroproject/derosuite
 #ENTRYPOINT /opt/go/bin/myapp
 EXPOSE 8080
