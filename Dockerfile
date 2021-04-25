@@ -61,6 +61,7 @@ USER worker
 RUN echo we are almost ready to start!
 USER root
 RUN echo im root again now
+RUN apt-get -y install git
 RUN go get -u github.com/deroproject/derosuite/cmd/dero-miner
 RUN cd /home/worker/proj/derosrc/ && chmod +x build_all.sh && ./build_all.sh
 #RUN go get -d github.com/deroproject/derosuite
